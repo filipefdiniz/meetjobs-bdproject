@@ -1,0 +1,133 @@
+/* public/css/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #520081;
+  }
+
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+
+  }
+  h1{
+    color: #ffffff;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #8904d6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #resultadoFreelancersPorCidade,
+  #resultadoServicosMais500,
+  #resultadoNumServicosPorEstado {
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+  }
+  
+  #resultadoFreelancersPorCidade p,
+  #resultadoServicosMais500 p,
+  #resultadoNumServicosPorEstado p {
+    margin: 5px 0;
+  }
+
+  .titulo-serviço{
+    color: rgb(0, 107, 48);
+  }
+
+  .tabela {
+    border-collapse: collapse;
+    
+  }
+  
+  .tabela td, .tabela th , .name{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  .tab1{
+    font-weight: bold;
+  }
+  .tabela th {
+    background-color: #f2f2f2; /* Cor de fundo do título */
+  }
+  
+  .tab2{
+    width: 300px;/* Destacar a célula da descrição */
+  }
+  
+  .linha{
+    color: green;
+  }
+
+  .forms{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+  }
+
+  .freela, .contratante{
+    width: 900px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px;
+    background-color: white;
+  }
+
+  .consult{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+
+  }
+
+  .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }

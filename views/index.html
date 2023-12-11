@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>MEET JOBS - BD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <img src="./logo.png" alt="">
+        <h1>MEET JOBS - SERVIÇOS FREELANCER</h1>
+    </div>
+
+    <!-- Formulário para consultar freelancers por cidade -->
+    <div class="consult">
+        <div>
+            <form id="freelancersPorCidadeForm">
+                <label for="cidade">
+                    <h2>Consultar Freelancers por Cidade:</h2>
+                </label>
+                <input type="text" id="cidade" name="cidade" required>
+                <button type="submit">Consultar</button>
+            </form>
+        </div>
+        <div id="resultadoFreelancersPorCidade"></div>
+    </div>
+    <!-- Consultar serviços a partir de seus pagamentos -->
+    <div class="consult">
+        <form id="consultarServicosForm">
+            <div>
+                <h2>Consulta de Serviços que pagam acima de: <input type="text" id="quantidade" name="quantidade"
+                        required></h2>
+                <button type="submit">Consultar</button>
+            </div>
+        </form>
+        <div id="resultadoServicosMais500"></div>
+    </div>
+
+
+
+    <!-- Consultar número de serviços por estado -->
+    <div class="consult">
+        <div>
+            <h2>Número de Serviços por Estado</h2>
+            <button onclick="consultarNumServicosPorEstado()">Consultar</button>
+        </div>
+        <div id="resultadoNumServicosPorEstado"></div>
+    </div>
+
+    <!-- Formulários para criar registros -->
+    <div class="forms">
+        <div class="freela">
+            <h2>Cadastrar Freelancer</h2>
+            <form onsubmit="criarFreelancer(); return false;">
+                <label for="nome_completo">Nome Completo:</label>
+                <input type="text" id="nome_completo" name="nome_completo" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+                <label for="cpf_cnpj">CPF/CNPJ:</label>
+                <input type="text" id="cpf_cnpj" name="cpf_cnpj" required>
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <label for="criado_em">Data de Criação:</label>
+                <input type="date" id="criado_em" name="criado_em" required>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao"></textarea>
+                <label for="competencias">Competências:</label>
+                <input type="text" id="competencias" name="competencias">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+                <button type="submit">Criar Freelancer</button>
+            </form>
+        </div>
+
+        <div class="contratante">
+            <h2>Cadastrar Contratante</h2>
+            <form onsubmit="criarContratante(); return false;">
+                <label for="nome_completo_contratante">Nome Completo:</label>
+                <input type="text" id="nome_completo_contratante" name="nome_completo_contratante" required>
+                <label for="cpf_cnpj_contratante">CPF/CNPJ:</label>
+                <input type="text" id="cpf_cnpj_contratante" name="cpf_cnpj_contratante" required>
+                <label for="descricao_contratante">Descrição:</label>
+                <textarea id="descricao_contratante" name="descricao_contratante"></textarea>
+                <label for="senha_contratante">Senha:</label>
+                <input type="password" id="senha_contratante" name="senha_contratante" required>
+                <label for="cep_contratante">CEP:</label>
+                <input type="text" id="cep_contratante" name="cep_contratante" required>
+                <label for="email_contratante">E-mail:</label>
+                <input type="email" id="email_contratante" name="email_contratante" required>
+                <label for="telefone_contratante">Telefone:</label>
+                <input type="text" id="telefone_contratante" name="telefone_contratante" required>
+                <label for="criado_em_contratante">Data de Criação:</label>
+                <input type="date" id="criado_em_contratante" name="criado_em_contratante" required>
+                <label for="id_servico_fk">ID do Serviço:</label>
+                <input type="number" id="id_servico_fk" name="id_servico_fk" required>
+                <button type="submit">Criar Contratante</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
